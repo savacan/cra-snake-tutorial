@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+
+const Hoge: FunctionComponent = () => {
+  return <div css={css({ color: 'red' })}>hogeeeee</div>
+}
+
+const StyledDiv = styled.div({
+  color: 'blue'
+})
+
+const Fuga: FunctionComponent = () => {
+  return <StyledDiv>fugaaaaa</StyledDiv>
+}
 
 const App: React.FC = () => {
   return (
@@ -19,6 +33,8 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <Hoge />
+      <Fuga />
     </div>
   )
 }
